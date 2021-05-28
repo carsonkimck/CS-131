@@ -10,6 +10,7 @@ import logging
 import re
 import sys
 import time
+import config 
 
 # Globals
 servers = {"Riley": 15310, "Jaquez": 15311, "Juzang": 15312, "Campbell": 15313, "Bernard": 15314}
@@ -23,7 +24,7 @@ server_relations = { "Riley" : ["Jaquez", "Juzang"],
 
 local = "127.0.0.1"
 nsr_url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?"
-api_key = "AIzaSyB0jjVTFxyh04RJ6khSCK61_e3C97Q538M"
+api_key = config.api_key
 
 # Helpers for parsing client messages
 
