@@ -1,0 +1,46 @@
+Start of log file for server Jaquez 
+
+Jaquez received the following message: AT Riley +1061312.9376552105 kiwi.cs.ucla.edu +34.068930-118.445127 1614209128.918963997
+New client kiwi.cs.ucla.edu received! Timestamp: 1614209128.918964 Coordinates: ['+34.068930', '-118.445127']
+Attempting to connect to neighbor Riley on port 15310
+Connection to Riley has been closed.
+Attempting to connect to neighbor Juzang on port 15312
+Connection to Juzang has been closed.
+Attempting to connect to neighbor Bernard on port 15314
+Connection to Bernard has been closed.
+Jaquez received the following message: AT Riley +1061312.9376552105 kiwi.cs.ucla.edu +34.068930-118.445127 1614209128.918963997
+Client kiwi.cs.ucla.edu's info is already stored.
+Jaquez received the following message: AT Riley +1061352.0057680607 kiwi.cs.ucla.edu +34.068930-118.445127 1614209128.918963997
+Client kiwi.cs.ucla.edu's info is already stored.
+Jaquez received the following message: IAMAT kiwi.cs.ucla.edu +34.068930-118.445127 1614209128.918963997
+Sending message back to kiwi.cs.ucla.edu: AT Jaquez +1061456.2017703056 kiwi.cs.ucla.edu +34.068930-118.445127 1614209128.918963997
+Attempting to connect to neighbor Riley on port 15310
+Connection to Riley has been closed.
+Attempting to connect to neighbor Juzang on port 15312
+Error: cannot connect to server Juzang
+Attempting to connect to neighbor Bernard on port 15314
+Error: cannot connect to server Bernard
+Jaquez received the following message: IAMAT kiwi.cs.ucla.edu +34.068930-118.445127 1614209128.918963997
+Sending message back to kiwi.cs.ucla.edu: AT Jaquez +1062725.3578414917 kiwi.cs.ucla.edu +34.068930-118.445127 1614209128.918963997
+Attempting to connect to neighbor Riley on port 15310
+Connection to Riley has been closed.
+Attempting to connect to neighbor Juzang on port 15312
+Error: cannot connect to server Juzang
+Attempting to connect to neighbor Bernard on port 15314
+Error: cannot connect to server Bernard
+Jaquez received the following message: WHATSAT kiwi.cs.ucla.edu 10 5
+Sending message back to kiwi.cs.ucla.edu: AT Jaquez +1062772.365329504 kiwi.cs.ucla.edu 10 5 1614209128.918964 
+{'html_attributions': [], 'results': [{'geometry': {'location': {'lat': 34.06888734586305, 'lng': -118.4450168552283}, 'viewport': {'northeast': {'lat': 34.0702312302915, 'lng': -118.4436835197085}, 'southwest': {'lat': 34.0675332697085, 'lng': -118.4463814802915}}}, 'icon': 'https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png', 'name': 'Westwood Plaza', 'place_id': 'ChIJ6Re7qYi8woAR22jVhVAye2M', 'reference': 'ChIJ6Re7qYi8woAR22jVhVAye2M', 'scope': 'GOOGLE', 'types': ['route'], 'vicinity': 'Los Angeles'}, {'business_status': 'OPERATIONAL', 'geometry': {'location': {'lat': 34.068921, 'lng': -118.4451811}, 'viewport': {'northeast': {'lat': 34.0828575, 'lng': -118.42990995}, 'southwest': {'lat': 34.0575047, 'lng': -118.46313815}}}, 'icon': 'https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/school-71.png', 'name': 'University of California, Los Angeles', 'photos': [{'height': 3024, 'html_attributions': ['<a href="https://maps.google.com/maps/contrib/102441856898186297335">Eod</a>'], 'photo_reference': 'ATtYBwJCvWXmqL9SqvodnV8b7YxCt3YcH8B4nFDW0v-ZrtDoJrkuxgfdtI-rlqrA2YwdknYYTFaCiwE0RdhhpPIzk9CDuP5Ui6GnGKiEZCXrcAAdmAPwPsuYL3bxanFOqdWE4T09xhUr2NKpG7ifMYHmJNmdM9gdJpPXH6-o1kxYIHp-HVWP', 'width': 4032}], 'place_id': 'ChIJZQ9c8IW8woARN0gTXFiTqSU', 'plus_code': {'compound_code': '3H93+HW Los Angeles, CA, USA', 'global_code': '85633H93+HW'}, 'rating': 4.5, 'reference': 'ChIJZQ9c8IW8woARN0gTXFiTqSU', 'scope': 'GOOGLE', 'types': ['university', 'point_of_interest', 'establishment'], 'user_ratings_total': 1855, 'vicinity': 'Los Angeles'}, {'geometry': {'location': {'lat': 34.0522342, 'lng': -118.2436849}, 'viewport': {'northeast': {'lat': 34.33730608759191, 'lng': -118.155289077463}, 'southwest': {'lat': 33.70365193147634, 'lng': -118.6681759484859}}}, 'icon': 'https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png', 'name': 'Los Angeles', 'photos': [{'height': 1350, 'html_attributions': ['<a href="https://maps.google.com/maps/contrib/102960872676267512930">Sharad Chauhan</a>'], 'photo_reference': 'ATtYBwKpY7uTM_Ht42HjlGYa8s-e0zDQaFcztEUD6qMhYve6qxhRNd96NGirKqJ7aO83AK8FoBM80QJh1mkawECg_8IBLZammBGuIkRM05V09n_6EbR-iR95drSvSsKPgy5lMuAeHpa64fRh0Cpp2xhRsld4AzoAPLssGnvY_RghaxpUfPW8', 'width': 1080}], 'place_id': 'ChIJE9on3F3HwoAR9AhGJW_fL-I', 'reference': 'ChIJE9on3F3HwoAR9AhGJW_fL-I', 'scope': 'GOOGLE', 'types': ['locality', 'political'], 'vicinity': 'Los Angeles'}], 'status': 'OK'}
+
+
+Jaquez received the following message: potato
+Error receiving message.
+Jaquez received the following message: IMAT POTAT 
+Error receiving message.
+Jaquez received the following message: IAMAT 3 3 3
+Task exception was never retrieved
+future: <Task finished name='Task-22' coro=<Server.handle_client_input() done, defined at /w/home.20/class/classcki/CS131/project/server.py:61> exception=UnboundLocalError("local variable 'client_id' referenced before assignment")>
+Traceback (most recent call last):
+  File "/w/home.20/class/classcki/CS131/project/server.py", line 86, in handle_client_input
+    logging.info("Sending invalid message back to {}: {}".format(client_id, sendback_message))
+UnboundLocalError: local variable 'client_id' referenced before assignment

@@ -1,0 +1,167 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Template for USENIX papers.
+%
+% History:
+%
+% - TEMPLATE for Usenix papers, specifically to meet requirements of
+%   USENIX '05. originally a template for producing IEEE-format
+%   articles using LaTeX. written by Matthew Ward, CS Department,
+%   Worcester Polytechnic Institute. adapted by David Beazley for his
+%   excellent SWIG paper in Proceedings, Tcl 96. turned into a
+%   smartass generic template by De Clarke, with thanks to both the
+%   above pioneers. Use at your own risk. Complaints to /dev/null.
+%   Make it two column with no page numbering, default is 10 point.
+%
+% - Munged by Fred Douglis <douglis@research.att.com> 10/97 to
+%   separate the .sty file from the LaTeX source template, so that
+%   people can more easily include the .sty file into an existing
+%   document. Also changed to more closely follow the style guidelines
+%   as represented by the Word sample file.
+%
+% - Note that since 2010, USENIX does not require endnotes. If you
+%   want foot of page notes, don't include the endnotes package in the
+%   usepackage command, below.
+% - This version uses the latex2e styles, not the very ancient 2.09
+%   stuff.
+%
+% - Updated July 2018: Text block size changed from 6.5" to 7"
+%
+% - Updated Dec 2018 for ATC'19:
+%
+%   * Revised text to pass HotCRP's auto-formatting check, with
+%     hotcrp.settings.submission_form.body_font_size=10pt, and
+%     hotcrp.settings.submission_form.line_height=12pt
+%
+%   * Switched from \endnote-s to \footnote-s to match Usenix's policy.
+%
+%   * \section* => \begin{abstract} ... \end{abstract}
+%
+%   * Make template self-contained in terms of bibtex entires, to allow
+%     this file to be compiled. (And changing refs style to 'plain'.)
+%
+%   * Make template self-contained in terms of figures, to
+%     allow this file to be compiled. 
+%
+%   * Added packages for hyperref, embedding fonts, and improving
+%     appearance.
+%   
+%   * Removed outdated text.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{usenix2020}
+
+% to be able to draw some self-contained figs
+\usepackage{tikz}
+\usepackage{amsmath}
+
+% inlined bib file
+\usepackage{filecontents}
+
+%-------------------------------------------------------------------------------
+\begin{filecontents}{\jobname.bib}
+%-------------------------------------------------------------------------------
+@Book{arpachiDusseau18:osbook,
+  author =       {Arpaci-Dusseau, Remzi H. and Arpaci-Dusseau Andrea C.},
+  title =        {Operating Systems: Three Easy Pieces},
+  publisher =    {Arpaci-Dusseau Books, LLC},
+  year =         2015,
+  edition =      {1.00},
+  note =         {\url{http://pages.cs.wisc.edu/~remzi/OSTEP/}}
+}
+@InProceedings{waldspurger02,
+  author =       {Waldspurger, Carl A.},
+  title =        {Memory resource management in {VMware ESX} server},
+  booktitle =    {USENIX Symposium on Operating System Design and
+                  Implementation (OSDI)},
+  year =         2002,
+  pages =        {181--194},
+  note =         {\url{https://www.usenix.org/legacy/event/osdi02/tech/waldspurger/waldspurger.pdf}}}
+\end{filecontents}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+%-------------------------------------------------------------------------------
+
+%don't want date printed
+\date{}
+
+% make title bold and 14 pt font (Latex default is non-bold, 16 pt)
+\title{\Large \bf Homework 6 Report:\\
+ Evaluating Zig for secure camera-based HVAC control}
+
+%for single author (just remove % characters)
+\author{Carson Kim - Winter 2021}
+% copy the following lines to add more authors
+% \and
+% {\rm Name}\\
+%Name Institution
+% end author
+\maketitle
+
+
+\section{Abstract}
+
+For this assignment, we were tasked with researching and evaluating one of three programming languages and its utility for Haversack Inc., an HVAC-systems company. The company's latest technology involves using cameras to monitor heat signatures of a building's human occupants and adjusting air temperatures accordingly. This brief report will discuss the prospects of Zig, a fairly new imperative, general-purpose language. 
+
+
+%-------------------------------------------------------------------------------
+\section{Introduction}
+%-------------------------------------------------------------------------------
+Zig seems to be a strong candidate for Haversack Inc.'s facial-recognition based thermostat applications. It is reminiscent of C/C++ with some differences in its type-checking, memory management system, and compile-time operations. Zig is a small, simple language that supports both high performance and safety through its four build modes. In addition, its lack of implicitness allows for "calls to be calls" and little to no opaqueness in determining variable types. It also requires manual memory management, giving more control to the programmer in how allocation and deallocation is handled. Of course, programmers may encounter difficulties when dealing with memory-failure related edge cases in their code. It is important to note that Zig does offer robust error-handling features to curb these types of problems. 
+
+\section{Effects on Security}
+There are security concerns with the implementation of a C/C++ program, as they have certain vulnerabilities. Of course, sensitive information within such programs needs to be protected. Luckily, Zig is a cleanly written language that would be rather easy to audit. Although it is a relatively new language, it offers a robust selection of build modes. These build modes allow for the prioritization of safety over performance, or vice versa.
+ 
+The 4 build modes, \verb +Debug+, \verb +ReleaseFast+, \verb +ReleaseSafe+, and \verb +ReleaseSmall+ all offer varying levels of safety checks, runtime performance levels, compilation speed, binary size, and reproducible build requirements. Of course, \verb +ReleaseSafe+ would be the preferred option for the programmers at Haversack during initial development, as it guarantees more program safety over performance.
+
+\section{Ease of Use}
+Because Zig is a relatively small, stripped-down language (especially when compared to other high-level languages such as Python and Java), it certainly meets expectations relating to ease of use. Its syntax is also more simple than C/C++ and aims for maximum readability. It also disallows hidden control flow. For example, since C++ has operator overloading, the + operator might call a function; Zig avoids this problem since its control flow is only managed with language keywords and function calls and it prohibits operator overloading as well. 
+
+Since SecureHEAT programmers are readily familiar with C and C++, they should have no problem using Zig. The language can interact with C in a number of different ways. For example, Zig can seamlessly integrate key C libraries without significant overhead or entanglements. In addition, it can compile C code and export functions / build libraries that C code can utilize. It accomplishes of this without depending on the C standard library.
+
+\section{Flexibility and Generality}
+
+In addition to the four build modes mentioned earlier, Zig also offers flexibility in a number of other areas. The SecureHEAT system must be able to communicate with low-level interfaces such as cameras and network interfaces, and Zig appears to support such interactions. Packed structs, multiple pointer types, and arbitrary integer width are just a few of Zig's supported low-level features. One can also directly inline assembly code in Zig if necessary. However, because Zig is a "smaller" language, it contains less language features than a language such as C or Java. This may feel somewhat constricting to programmers on the SecureHEAT team, especially since Zig relies so much on its powerful comptime methods to achieve explicit type behavior. 
+
+\begin{figure}
+\caption{Example of generically-typed data structure in Zig}
+\includegraphics[scale=.5]{Downloads/generic.PNG} 
+
+\end{figure}
+
+
+
+Zig also emphasizes generality in its design, as it supports generic data structures and functions. Compile time parameters allow for duck-typing in Zig, which may prove to be superior to C / C++'s system of handling templated objects. Figure 1 contains a snippet of code from a Zig program that contains a data structure that returns a type that is determined at compile time (with the help of the \verb +comptime+ keyword). 
+
+
+\section{Memory Management and Performance}
+Since code written in Zig can have wide applications, programmers must manage their own memory - including the failure of memory allocation. The documentation mentions that the Zig Standard Library is compatible with freestanding programs so long as memory is allocated with an allocation parameter. Since the programmer is responsible for various aspects of the memory management system, such as preventing memory leaks, accessing null pointers, or corrupting the heap, dynamic allocation is a bit riskier. It should go without saying that the team developing the SecureHEAT system should be able to swiftly detect and eliminate any problems that arise out of non-automatic memory management systems.
+
+In terms of performance, Zig's 4 build modes offer a wide range of improving / optimizing program speed. The \verb +Optimizations+ parameter improves speed at the cost of debugging and compile time. In addition, Zig limits runtime overhead through \verb +comptime+ variables, where types can be manipulated as values. 
+ 
+
+\section{Conclusion}
+
+In general, Zig's design seems to be suited for Haversack's requirements. It is lightweight, generic, and easy enough to learn - especially for those familiar with C and C++ syntax. Of course, there is a trade-off; Zig sacrifices some tools for its low-abstraction and explicitness. In addition, programmers will have to worry about managing memory themselves when writing code in Zig. Despite certain drawbacks, it seems like Zig could be a good fit for writing safe, secure applications in the SecureHEAT system. 
+
+\section{References}
+\url{https://ziglang.org/documentation/0.4.0/}
+
+\url {https://jaxenter.com/replace-c-zig-language-138242.html}
+
+\url {https://jaxenter.com/zig-language-kelley-interview-138517.html}
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%  LocalWords:  endnotes includegraphics fread ptr nobj noindent
+%%  LocalWords:  pdflatex acks

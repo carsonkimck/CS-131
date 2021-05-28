@@ -1,0 +1,25 @@
+Carson Kim
+HW1 Report
+
+
+Part I: Set Problems
+
+For most of the set problems, I consulted https://caml.inria.fr/pub/docs/manual-ocaml/libref/List.html as well as some of the official OCaml documentation. I found the functions
+sort_uniq to be especially helpful when removing duplicates from the union of a list. Indeed, I ended up taking recursive approaches to most of the problems (the first could be accomplished through a simple list scanning function). I created a few of my own helper functions to complete the bulk of the work, and then the "real" functions simply sort and remove duplicates. 
+
+
+Part II: filter_unreachable 
+
+Since terminal symbols are mostly irrelevant to solving this problem, I first wrote a few functions that take in 
+a list of rules and remove all the Terminal symbols (as well as the "N"s), leaving just the names of the different
+nonterminal symbols. My focus then shifted to writing a function that would output all the possible reachable nonterminals. This was difficult, as I had to figure out how to also traverse items in the right hand side of a rule, while still keeping track of what symbols I had already recorded as reachable. I also found problems with infinite recursion, as sometimes a symbol had a RHS that contained that symbol. The solution to this was to essentially iterate through the list of rules and filter out those instances. 
+
+The function "obtainAllNonT" utilizes the "matchNonT" function which returns a list based on the starting symbol given, in this case it is always a nonterminal. 
+
+The reachable_Rules function removes all of the rules in the list that are not accessible, and it does so while also
+preserving the order of the rules. 
+
+I approached the problem this way because it seemed the most understandable to me in my head. By first figuring out which symbols and rules **are** reachable, and putting that information into a list, we can then figure out how which ones are not using that very list. 
+
+
+

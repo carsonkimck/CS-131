@@ -1,0 +1,14 @@
+HW 2 Report
+Carson Kim 
+1/28/2021
+
+
+For convert_grammar, I had to figure out how to turn the first grammar into a tuple of the type
+'a * ('a -> ('a, 'b) symbol list list). 
+
+Once I figured out that I could simply use a curried function to accomplish this, the task became quite easy to implement. 
+
+Similarly, the tree parser was also quite easy. It was simply a matter of defining a recurisve function that would 
+traverse through the tree and accumulate a list of leaves it encountered in the various subtrees of each node. 
+
+make_matcher and make_parser were rather difficult to implement, and I wasn't able to get a working solution done in time. I had code, but it was unclear whether they would work with each other to form a comprehensive solution. As a result, I've omitted it from my final results. I did include a grammar of my own, however. 

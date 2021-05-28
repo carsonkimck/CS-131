@@ -1,0 +1,10 @@
+Start of log file for server Campbell 
+
+Campbell received the following message: AT Riley +1061312.9376552105 kiwi.cs.ucla.edu +34.068930-118.445127 1614209128.918963997
+New client kiwi.cs.ucla.edu received! Timestamp: 1614209128.918964 Coordinates: ['+34.068930', '-118.445127']
+Attempting to connect to neighbor Juzang on port 15312
+Connection to Juzang has been closed.
+Attempting to connect to neighbor Bernard on port 15314
+Connection to Bernard has been closed.
+Campbell received the following message: AT Riley +1061312.9376552105 kiwi.cs.ucla.edu +34.068930-118.445127 1614209128.918963997
+Client kiwi.cs.ucla.edu's info is already stored.
